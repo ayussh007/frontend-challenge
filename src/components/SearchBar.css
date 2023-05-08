@@ -1,0 +1,12 @@
+input {
+  border: none;
+  border-bottom: 3px solid black;
+  font-weight: bolder;
+  font-size: medium;
+
+}
+
+.searchbar-form {
+  justify-content: center;
+  margin-left: 30%;
+}

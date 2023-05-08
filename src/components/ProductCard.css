@@ -1,0 +1,47 @@
+
+.main-header {
+    width: 80%;
+  }
+  
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-flow: wrap;
+  }
+  
+  .card-in-row {
+    width: 30%;
+    justify-content: center;
+    background: #ecebeb;
+    margin-bottom: 42px;
+  }
+  
+  @media only screen and (min-width: 200px) and (max-width: 400px)  {
+    .container {
+      width: 100%;
+    }
+  
+    .card-in-row {
+      width: 80%;
+    }
+  
+  }
+
+  @media only screen and (min-width: 401px) and (max-width: 900px)  {
+    .card-in-row {
+      width: 45%;  
+    }
+  
+  }
+  
+  @media only screen and (min-width: 200px) and (max-width: 767px)  {
+  
+    .row{
+        justify-content: center;
+    }
+    .products{
+        width: 100%;
+    }
+  
+  }
