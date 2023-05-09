@@ -2,7 +2,6 @@ import { color } from "@mui/system";
 import React, { useState } from "react";
 import "./Cart.css";
 import Header from "./Header";
-import Products from "./Products";
 
 const Cart =  ({cartItems, handleAdd, removeFromCart, handleDelete, totalQuantity}) => {
 
@@ -34,27 +33,21 @@ const Cart =  ({cartItems, handleAdd, removeFromCart, handleDelete, totalQuantit
                     <div className="item" key={item.id}>
                       <div className="product">
                         <div className="productImage">
-                          <img src={item.imageURL} alt={item.name} />
+                          <img src={item.image} alt={item.title} />
                         </div>
                         <div className="space-between"></div>
                         <div className="space-between"></div>
 
                         <div className="productDetail">
                           <div className="card-content1">
-                            <p style={{ fontWeight: "bold", color:"#535B4E"}}>{item.name}</p>
-                            <p style={{ fontSize: "15px" }}>
-                              Rs.{item.price}
-                            </p>
-                          </div>
+                            <p style={{ fontWeight: "bold", color:"#535B4E", objectFit:"contain"}}>{item.title}</p>
+                          </div>  
                           <div className="space-between"></div>
-
                           <div className="card-content2">
-                            <p style={{ fontWeight: "bold" }}>Quantity: {item.productinCart}</p>
-                            <p>
-                              {item.quantity === item.productinCart
-                                ? `No Stock Left`
-                                : `Stock: ${item.quantity}`}
+                            <p style={{ fontSize: "15px", fontWeight: "700", color: "grey"}}>
+                              $ {item.price}
                             </p>
+                            <p style={{ fontWeight: "bold" }}>Quantity: {item.productinCart}</p>
                           </div>
                         </div>
                       </div>
@@ -92,7 +85,7 @@ const Cart =  ({cartItems, handleAdd, removeFromCart, handleDelete, totalQuantit
                 <div className="seperator"></div>
                 <div className="total data">
                   <div className="totalprice" style={{color:"black"}}>
-                    Total Amount: Rs.{totalPrice}
+                    Total Amount: $ {totalPrice}
                   </div>
                 </div>
               </div>
