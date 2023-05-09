@@ -11,7 +11,7 @@ const Header = ({children}) => {
 
   return (
       <Box className="header">
-        { <Box className="header-title" onClick={() => history.push("/", {from: "Header" })}>TeeRex Store
+        { <Box className="header-title" onClick={() => history.push("/", {from: "Header" })}>E-Commerce App
         </Box> }
         {children}
         <Stack direction="row" spacing={1}>
